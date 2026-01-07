@@ -1,7 +1,7 @@
 import json
 
 # 读取 meta.json（每行一个JSON对象）
-meta_file = '/data/CaiZhuaoXiao/dataset/GB/meta-GB.json'
+meta_file = '/dataset/GB/meta-GB.json'
 meta_dict = {}
 
 with open(meta_file, 'r', encoding='utf-8') as f:
@@ -12,8 +12,8 @@ with open(meta_file, 'r', encoding='utf-8') as f:
             meta_dict[gmap_id] = item
 
 # 处理 output.jsonl
-output_file = '/data/CaiZhuaoXiao/dataset/GB/output.jsonl'
-new_output_file = '/data/CaiZhuaoXiao/dataset/GB/poitemplate.jsonl'
+output_file = '/dataset/GB/output.jsonl'
+new_output_file = '/dataset/GB/poitemplate.jsonl'
 
 with open(output_file, 'r', encoding='utf-8') as infile, open(new_output_file, 'w', encoding='utf-8') as outfile:
     for line in infile:
