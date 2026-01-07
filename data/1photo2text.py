@@ -11,8 +11,8 @@ logger = logging.getLogger()
 
 # Define the function
 def image_to_text(skip_img_file, photo_dir_, write_filename_, cuda_no='cuda:0'):
-    processor = AutoProcessor.from_pretrained("/data/CaiZhuaoXiao/blip2-opt-2.7b")
-    model = Blip2ForConditionalGeneration.from_pretrained("/data/CaiZhuaoXiao/blip2-opt-2.7b", torch_dtype=torch.float16)
+    processor = AutoProcessor.from_pretrained("")
+    model = Blip2ForConditionalGeneration.from_pretrained("", torch_dtype=torch.float16)
     device = torch.device(cuda_no if torch.cuda.is_available() else "cpu")
     model.to(device)
     
@@ -88,7 +88,7 @@ def image_to_text(skip_img_file, photo_dir_, write_filename_, cuda_no='cuda:0'):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--region', type=str, default='NYC', help='the region name of datasets(e.g. California)')
-    parser.add_argument('--dataset_path', type=str, default='/data/CaiZhuaoXiao/NYC/', help='the index of the cuda')
+    parser.add_argument('--dataset_path', type=str, default='/NYC/', help='the index of the cuda')
     parser.add_argument('--cuda', type=str, default='1', help='the index of the cuda')
     args, _ = parser.parse_known_args()
 
