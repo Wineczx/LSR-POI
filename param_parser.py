@@ -12,7 +12,7 @@ else:
 def parameter_parser():
     parser = argparse.ArgumentParser(description="Run GETNext.")
     parser.add_argument('--project',
-                        default='/data/CaiZhuaoXiao/cold-GB',
+                        default='',
                         help='save to project/name')
     parser.add_argument('--seed',
                         type=int,
@@ -23,11 +23,11 @@ def parameter_parser():
                         default=device,
                         help='')
     parser.add_argument('--name',
-                        default='GB-10-0.1-6-coldpoi',
+                        default='',
                         help='save to project/name')
     parser.add_argument('--num-sim',
                         type=int,
-                        default=10,
+                        default=2,
                         help='Remove over-short trajectory')
     parser.add_argument('--sim-loss-weight',
                         type=int,
@@ -48,27 +48,27 @@ def parameter_parser():
     # Data
     parser.add_argument('--data-adj-mtx',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/graph_A.csv',
+                        default='/dataset/GB/graph_A.csv',
                         help='Graph adjacent path')
     parser.add_argument('--data-node-feats',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/graph_X.csv',
+                        default='/dataset/GB/graph_X.csv',
                         help='Graph node features path')
     parser.add_argument('--data-train',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/GB_train.csv',
+                        default='/dataset/GB/GB_train.csv',
                         help='Training data path')
     parser.add_argument('--data-val',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/coldpoi.csv',
+                        default='/dataset/GB/coldpoi.csv',
                         help='Validation data path')
     parser.add_argument('--data-feature',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/poi_features.pkl',
+                        default='/dataset/GB/poi_features.pkl',
                         help='Validation data path')
     parser.add_argument('--data-sim',
                         type=str,
-                        default='/data/CaiZhuaoXiao/dataset/GB/top_k_similar_traj.pkl',
+                        default='/dataset/GB/top_k_similar_traj.pkl',
                         help='Validation data path')
     # Training hyper-parameters
     parser.add_argument('--lr-scheduler-factor',
