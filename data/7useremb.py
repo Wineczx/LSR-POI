@@ -8,8 +8,8 @@ from openai import OpenAI, OpenAIError
 
 # 初始化 OpenAI 客户端
 client = OpenAI(
-    base_url='https://xiaoai.plus/v1',
-    api_key = "sk-976zO2MAnA6GcDR39417iJSA4cMiBBKkQtoSvHNCHXGjbTfU" 
+    base_url='',
+    api_key = "" 
 )
 
 # ======= 批量获取嵌入（带重试、超时）=======
@@ -83,7 +83,7 @@ def process_templates(input_file, output_file, save_every=100, batch_size=10):
 
 # ======= 执行入口 =======
 if __name__ == "__main__":
-    input_file = '/data/CaiZhuaoXiao/dataset/GB/user_templates.jsonl'
-    output_file = '/data/CaiZhuaoXiao/dataset/GB/trajectory_features.pkl'
+    input_file = ''
+    output_file = ''
 
     process_templates(input_file, output_file, save_every=300, batch_size=40)
