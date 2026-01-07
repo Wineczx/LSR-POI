@@ -3,7 +3,7 @@ import pickle
 import torch
 
 # 加载 trajectory_features.pkl 文件
-with open("/data/CaiZhuaoXiao/dataset/GB/trajectory_features.pkl", "rb") as f:
+with open("/dataset/GB/trajectory_features.pkl", "rb") as f:
     traj_features = pickle.load(f)
 
 # 获取 traj_ids 和特征数组
@@ -49,7 +49,7 @@ for i, (tid, similar_list) in enumerate(top_k_similar_traj.items()):
         break
 
 # 保存为 pkl 文件
-with open("/data/CaiZhuaoXiao/dataset/GB/top_k_similar_traj.pkl", "wb") as f:
+with open("/dataset/GB/top_k_similar_traj.pkl", "wb") as f:
     pickle.dump(top_k_similar_traj, f)
 
 print("✅ 最相似的轨迹 ID 已保存为 top_k_similar_traj.pkl")
