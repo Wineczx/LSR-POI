@@ -1,9 +1,9 @@
 import json
 
 # 文件路径
-cate_file = "/data/CaiZhuaoXiao/dataset/GB/meta-GB.json"
-review_file = "/data/CaiZhuaoXiao/dataset/GB/review_summary.json"
-image_file = "/data/CaiZhuaoXiao/dataset/GB/image_description.json"
+cate_file = "/dataset/GB/meta-GB.json"
+review_file = "/dataset/GB/review_summary.json"
+image_file = "/dataset/GB/image_description.json"
 output_file = "generated_prompts.json"
 def load_jsonlines_with_strip_prefix(filename):
     """
