@@ -137,7 +137,7 @@ def print_graph_statisics(G):
 
 
 if __name__ == '__main__':
-    dst_dir = r'/data/CaiZhuaoXiao/dataset/GB'
+    dst_dir = r'/dataset/GB'
 
     # Build POI checkin trajectory graph
     train_df = pd.read_csv(os.path.join(dst_dir, 'GB_train.csv'))
