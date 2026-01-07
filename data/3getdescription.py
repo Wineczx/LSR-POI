@@ -10,7 +10,7 @@ output_file = "output.jsonl"
 temp_file = "output.tmp.jsonl"
 
 # 加载模型
-model_id = "/data/CaiZhuaoXiao/Llama-3-8b"
+model_id = "/Llama-3-8b"
 pipe = pipeline(
     "text-generation",
     model=model_id,
