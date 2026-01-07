@@ -5,15 +5,15 @@ from tqdm import tqdm
 import os
 import time
 
-API_KEY = 'sk-976zO2MAnA6GcDR39417iJSA4cMiBBKkQtoSvHNCHXGjbTfU'
-API_URL = "https://xiaoai.plus/v1/embeddings"
+API_KEY = ''
+API_URL = ""
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"
 }
 
-input_file = "/data/CaiZhuaoXiao/dataset/GB/poitemplate.jsonl"
-output_pkl = "/data/CaiZhuaoXiao/dataset/GB/poi_features.pkl"
+input_file = ""
+output_pkl = ""
 
 BATCH_SIZE = 60
 SAVE_EVERY = 100
