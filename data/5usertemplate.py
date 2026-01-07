@@ -3,11 +3,11 @@ import json
 from collections import defaultdict
 
 # 读取 train.csv
-train_df = pd.read_csv("/data/CaiZhuaoXiao/dataset/GB/GB_train.csv")
+train_df = pd.read_csv("/dataset/GB/GB_train.csv")
 
 # 读取 GB_meta.json（每行一个 json 对象）
 poi_meta = {}
-with open("/data/CaiZhuaoXiao/dataset/GB/meta-GB.json", "r", encoding="utf-8") as f:
+with open("/dataset/GB/meta-GB.json", "r", encoding="utf-8") as f:
     for line in f:
         data = json.loads(line)
         poi_id = data["gmap_id"]
@@ -31,7 +31,7 @@ for _, row in train_df.iterrows():
         user_poi_dict[trajectory_id].append((new_poi_id, category, lat, lon))
 
 # Step 3: 生成模板并保存为 JSON 行格式
-with open("/data/CaiZhuaoXiao/dataset/GB/user_templates.jsonl", "w", encoding="utf-8") as out_file:
+with open("/dataset/GB/user_templates.jsonl", "w", encoding="utf-8") as out_file:
     for trajectory_id, poi_list in user_poi_dict.items():
         poi_strs = []
         for idx, (new_poi_id, category, lat, lon) in enumerate(poi_list):
